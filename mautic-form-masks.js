@@ -1,14 +1,14 @@
 $(document).ready(function () {
 
-  // Requires https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js
+  // Requires https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js
 
   'use strict'
 
   // Aplica mascara no cpf
-  $('input[id*="cpf"]').mask('000.000.000-00', {reverse: true})
+  $('input[id*="cpf"], input[class*="cpf"]').mask('000.000.000-00', {reverse: true})
 
   // Aplica mascara no telefone
-  $('input[id*="telefone"]').mask('(00) 0000-0000')
+  $('input[id*="telefone"], input[class*="telefone"]').mask('(00) 0000-0000')
 
   // Aplica mascara para celular com nono digito
   var SPMaskBehavior = function (val) {
@@ -20,6 +20,6 @@ $(document).ready(function () {
       }
   }
 
-  $('input[id*="celular"]').mask(SPMaskBehavior, spOptions)
+  $('input[id*="celular"]', 'input[id*="telefone"]', 'input[type=tel]').mask(SPMaskBehavior, spOptions)
 
 });
