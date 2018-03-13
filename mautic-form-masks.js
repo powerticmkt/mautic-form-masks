@@ -1,25 +1,28 @@
 $(document).ready(function () {
 
-  // Requires https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js
+  // Requires https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js
 
   'use strict'
 
-  // Aplica mascara no cpf
-  $('input[id*="cpf"], input[class*="cpf"]').mask('000.000.000-00', {reverse: true})
+  jQuery('input[name*="cep"]').mask('00000-000');
 
-  // Aplica mascara no telefone
-  $('input[id*="telefone"], input[class*="telefone"]').mask('(00) 0000-0000')
+  jQuery('input[name*="cnpj"]').mask('00.000.000/0000-00', {
+    reverse: true
+  });
+
+  jQuery('input[id*="cpf"], input[class*="cpf"]').mask('000.000.000-00', {
+    reverse: true
+  });
 
   // Aplica mascara para celular com nono digito
-  var SPMaskBehavior = function (val) {
+  var BRMaskBehavior = function(val) {
       return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009'
     },
     spOptions = {
       onKeyPress: function (val, e, field, options) {
-        field.mask(SPMaskBehavior.apply({}, arguments), options)
+        field.mask(BRMaskBehavior.apply({}, arguments), options)
       }
-  }
 
-  $('input[id*="celular"]', 'input[id*="telefone"]', 'input[type=tel]').mask(SPMaskBehavior, spOptions)
+  $('input[type=tel], input[id*="telefone"], input[class*="telefone"]').mask(SPMaskBehavior, spOptions)
 
 });
