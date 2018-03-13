@@ -3,8 +3,5 @@ JQuery Masks on Mautic Forms Fields
 
 Include on your HEAD tag
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-
-Then include this on your website:
-
-<script src="https://rawgit.com/luizeof/mautic-form-masks/master/mautic-form-masks.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script src="https://cdn.rawgit.com/powerticmkt/mautic-form-masks/726c8fce/mautic-form-masks.js"></script>

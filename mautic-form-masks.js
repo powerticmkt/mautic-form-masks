@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-  // Requires https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js
-
   'use strict'
 
   jQuery('input[name*="cep"]').mask('00000-000');
