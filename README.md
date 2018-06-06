@@ -20,11 +20,11 @@ Now include this two lines on your HEAD tag AFTER the JQuery:
 
 ## Usage
 
-Basicly you need to include an mautic field with this name patterns:
+Basicaly you need to include an mautic field with this name patterns:
 
  - cep
  - cpf
  - cnpj
  - telefone
 
- The `mautic-form-masks` script will automatically recognize this input names and apply the mask.
+ The `mautic-form-masks` script will automatically recognize these input names and apply the mask.
