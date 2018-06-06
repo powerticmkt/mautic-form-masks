@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
 
     jQuery('input[name*="cep"]').mask('00000-000');
 
