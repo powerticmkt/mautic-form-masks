@@ -21,7 +21,7 @@ jQuery(document).ready(function() {
                 field.mask(BRMaskBehavior.apply({}, arguments), options)
             }
 
-                jQuery('input[type=tel], input[id*="telefone"], input[class*="telefone"]').mask(SPMaskBehavior, spOptions);
+                jQuery('input[type=tel], input[id*="telefone"], input[class*="telefone"]').mask(BRMaskBehavior, spOptions);
 
         }
 });
